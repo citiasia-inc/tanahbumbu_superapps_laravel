@@ -1,0 +1,73 @@
+.tbox_list {
+padding-top:20px;padding-left:10px;padding-right:15px;
+}
+
+.tbox_color {
+font-size:14px;text-align:center;font-weight:600;
+}
+
+
+#tbox_login {
+display:none;
+}
+
+#tbox_saldo {
+display:none;margin-top:95px;color:#000;margin-left:30px;font-size:13px;font-weight:600;width:85%;background-color:#f6f6f6;padding:10px;
+}
+
+.line-color {
+width:89%;margin-left:30px;margin-top:10px;
+}
+
+.tbox_result {
+padding-left:30px;font-weight:bold;width:87%;color:#4679bd;display:none;
+}
+
+.tbox_price {
+margin-left:20px;float:left;width:90%;margin-top:2px;color:#445870;cursor:pointer;padding:10px;border: 1px solid #cfcfcf;border-radius:0px;margin-right:10px;background-color: #f8f8f8;text-align:center;font-weight:600;margin-bottom:5px;
+}
+
+.tbox_desc {
+font-size:90%;font-weight:normal;float:left;text-align:left;width:85%;
+}
+
+.tbox_price.active {
+border: 1px solid #4679bd;
+background-color: #4679bd;
+color: #fff;
+}
+
+#tdisable_box_price {
+cursor:default;color:#cfcfcf;
+}
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 500px) {
+.line-color, #tbox_saldo {
+margin-left: 20px;
+}
+.tbox_price, .tdisable_box_price {
+margin-left:10px;width:90%;padding:12px;
+}
+.tbox_desc {
+width:70%;
+}
+.tbox_result {
+padding-left: 20px;
+}
+}
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 400px) {
+.tbox_list {
+padding-left:15px;
+}
+.tbox_price, .tdisable_box_price {
+margin-left:10px;width:85%;padding:7px;padding-bottom:15px;padding-top:15px;
+}
+.tbox_desc {
+width:70%;
+}
+}

@@ -1,0 +1,53 @@
+.result_upload {
+width:95%;
+}
+
+.close-x{
+  color: #C4C4C4;
+  cursor:pointer;
+  font-size:30px;
+  position: absolute;
+  right: 2px;
+  top: calc(4% - 2em); /* Keep icon in center of input, regardless of the input height */
+}
+@media only screen
+and (min-width : 50px)
+and (max-width : 800px) {
+.close-x {
+  top: calc(4% - 1.5em); /* Keep icon in center of input, regardless of the input height */
+  font-size:30px;
+}
+}
+#profile, #identitas_selfie {
+box-shadow: none;
+background: none !important;
+width:30%;
+}
+#identitas {
+box-shadow: none;
+background: none !important;
+width:45%;
+}
+.well.bg-popup-homepage {
+font-weight:600;
+}
+@media only screen
+and (min-width : 410px)
+and (max-width : 700px) {
+#profile, #identitas_selfie {
+width:70%;
+}
+#identitas {
+width:85%;
+}
+}
+@media only screen
+and (min-width : 50px)
+and (max-width : 410px) {
+#profile, #identitas_selfie {
+width:60%;
+}
+#identitas {
+width:70%;
+}
+}

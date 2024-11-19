@@ -1,0 +1,37 @@
+/* * * * * * * * * * * * * * * * * * * * *
+* Start page
+* * * * * * * * * * * * * * * * * * * * */
+.annotated-list { box-sizing: border-box; }
+.annotated-list .list { padding-top: 0px; }
+.annotated-list .list > div { padding: 0px 0; border-top: solid 1px rgba(255, 255, 255, 0.1); }
+.annotated-list .avatar { max-width: 150px; }
+.annotated-list .avatar img { max-width: 100%; }
+.annotated-list h3 { font-size: 16px; font-size: 1.6rem; margin: 0 0 3px; font-weight: bold; }
+.annotated-list p { margin: 0; }
+.annotated-list .sort { font-size: 11px; padding: 5px 10px; border-radius: 15px; border: none; display: inline-block; color: #2e2e2e; text-decoration: none; background-color: rgba(0, 0, 0, 0.05); margin: 2px 0; cursor:pointer; }
+.annotated-list .sort:hover { text-decoration: none; background-color: rgba(0, 0, 0, 0.1); }
+.annotated-list .sort:focus { outline: none; }
+.annotated-list .sort:after { width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-bottom: 4px solid transparent; content: ""; position: relative; top: -10px; right: -4px; }
+.annotated-list .sort.asc:after { width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid #2e2e2e; content: ""; position: relative; top: 11px; right: -4px; }
+.annotated-list .sort.desc:after { width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-bottom: 4px solid #2e2e2e; content: ""; position: relative; top: -9px; right: -4px; }
+
+
+.scrollup{
+width:40px;
+height:40px;
+text-indent:-9999px;
+opacity:0.3;
+position:fixed;
+bottom:50px;
+right:25%;
+display:none;
+background: url('icon_top.png') no-repeat;
+}
+@media only screen
+and (min-width : 50px)
+and (max-width : 800px) {
+.scrollup{
+right:45%;
+bottom:10px;
+}
+}

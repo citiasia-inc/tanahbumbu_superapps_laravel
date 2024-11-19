@@ -1,0 +1,81 @@
+.divbox-icon25-2 {
+float:left;margin-left:10px;width:21%;margin-top:10px;color:#445870;cursor:pointer;padding:10px;
+}
+
+.divbox-icon25-2:active, .divbox-icon25-2:hover, .divbox-icon25-2:visited {
+ background-color: #f8f8f8;
+}
+
+.divbox-icon20-2 {
+float:left;margin-left:10px;width:19%;margin-top:10px;color:#445870;cursor:pointer;padding:10px;
+}
+
+.divbox-icon20-2:active, .divbox-icon20-2:hover, .divbox-icon20-2:visited {
+ background-color: #f8f8f8;
+}
+
+.text-icon12 {
+font-size:14px;margin-left:10px;color:#445870;
+}
+
+.text-icon11 {
+font-size:13px;margin-left:10px;color:#445870;
+}
+
+.img-icon {
+width:24px;float:left;
+}
+
+.h2-icon10 {
+padding-top:20px;font-size:120%;padding-left:15px;font-weight:600;color:#445870;
+}
+
+.h2-icon40 {
+padding-top:50px;font-size:120%;padding-left:15px;font-weight:600;color:#445870;
+}
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 700px) {
+.divbox-icon25-2 {
+width:40%;
+}
+
+.divbox-icon25-2:active {
+ background-color: #f8f8f8;
+}
+
+.divbox-icon20-2 {
+width:40%;
+}
+
+.divbox-icon20-2:active {
+ background-color: #f8f8f8;
+}
+
+.img-icon {
+vertical-align:middle;width:28px;
+}
+
+.text-icon12 {
+display:block;font-size:14px;padding:3px;padding-left:30px;
+}
+
+.text-icon11 {
+font-size:12px;
+}
+}
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 400px) {
+
+.img-icon {
+vertical-align:middle;width:24px;
+}
+
+.text-icon12 {
+vertical-align:middle;font-size:13px;padding-left:27px;
+}
+
+}

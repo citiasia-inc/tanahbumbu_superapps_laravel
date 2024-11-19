@@ -1,0 +1,18 @@
+{
+    "name": "SuperApp Tanbu",
+    "short_name": "SuperApp Tanbu",
+    "start_url": "/welcome",
+    "display": "fullscreen",
+    "scope" : "/",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "assets/img/icon/logo_b.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+.ibox_list {
+padding-top:20px;padding-left:10px;padding-right:15px;
+}
+
+.ibox_color {
+font-size:14px;text-align:center;font-weight:600;
+}
+
+
+#ibox_login {
+display:none;
+}
+
+#ibox_saldo {
+display:none;margin-top:95px;color:#000;margin-left:30px;font-size:13px;font-weight:600;width:85%;background-color:#f6f6f6;padding:10px;
+}
+
+.line-color {
+width:89%;margin-left:30px;margin-top:10px;
+}
+
+.ibox_result {
+padding-left:30px;font-weight:bold;width:87%;color:#4e9587;display:none;
+}
+
+.ibox_price {
+margin-left:20px;float:left;width:15%;margin-top:5px;color:#445870;cursor:pointer;padding:10px;border: 1px solid #cfcfcf;border-radius:0px;margin-right:10px;background-color: #f8f8f8;text-align:center;font-weight:600;margin-bottom:15px;
+}
+
+.ibox_price.active {
+border: 1px solid #4e9587;
+background-color: #4e9587;
+color: #fff;
+}
+
+#idisable_box_price {
+cursor:default;color:#cfcfcf;
+}
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 500px) {
+.line-color, #ibox_saldo {
+margin-left: 20px;
+}
+.ibox_price, .idisable_box_price {
+margin-left:15px;width:20%;padding:12px;
+}
+.ibox_result {
+padding-left: 20px;
+}
+}
+
+@media only screen
+and (min-width : 50px)
+and (max-width : 400px) {
+.ibox_list {
+padding-left:15px;
+}
+.ibox_price, .idisable_box_price {
+margin-left:10px;width:22%;padding:6px;padding-bottom:15px;padding-top:15px;
+}
+}
