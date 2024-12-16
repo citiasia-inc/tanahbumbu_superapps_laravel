@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MenuFrontController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\SocialiteController;
@@ -66,8 +66,12 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth','PreventBackHis
         Route::delete('newsdestroy/{id}',[NewsController::class,'destroy'])->name('admin.newsdestroy');
         Route::get('newsedit/{id}',[NewsController::class,'edit'])->name('admin.newsedit');;
         Route::put('newsupdate/{id}',[NewsController::class,'update']);
-    
-
+    //menage front menu
+    Route::get('menufront',[MenuFrontController::class,'MenuFront'])->name('admin.menufront');
+    Route::get('menufrontedit/{id}',[MenuFrontController::class,'edit'])->name('admin.menufrontedit');;
+    Route::delete('menufrontdestroy/{id}',[MenuFrontController::class,'destroy'])->name('admin.menufrontdestroy');
+    Route::put('menufrontupdate/{id}',[MenuFrontController::class,'update']);
+        
 });
 
 Route::group(['prefix'=>'user', 'middleware'=>['isUser','auth','PreventBackHistory']], function(){

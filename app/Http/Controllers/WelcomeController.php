@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\User;
 use App\Models\News;
+use App\Models\MenuFrontModel;
 use App\Notifications\BirthdayWish;
 
 class WelcomeController extends Controller
@@ -13,6 +14,7 @@ class WelcomeController extends Controller
     public function index()
     {
         $data['news'] = News::orderBy('id', 'DESC')->limit(5)->get();
+        $data['menufront'] = MenuFrontModel::orderBy('id', 'ASC')->get();
         return view('welcome', $data);
     }
     public function homelainnya(){
@@ -33,7 +35,7 @@ class WelcomeController extends Controller
         $iframeSource ="https://sipadu.tanahbumbukab.go.id";
         switch ($id) {
             case "1":
-                return redirect()->route('welcome');
+                $iframeSource ="https://demo.lihat.net";
                 break;
             case "2":
                 return redirect()->route('welcome');

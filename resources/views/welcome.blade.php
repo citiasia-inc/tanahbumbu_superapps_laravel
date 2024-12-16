@@ -36,74 +36,16 @@
 
         <div class="section">
             <div class="row mt-2">
+            @foreach($menufront as $row)
                 <div class="col-3">
-                    <a href="#">
+                    <a href="{{$row->link_menu}}">
                                 <div class="user-card">
-                                    <img src="assets/img/icon_cafe.png" alt="img" class="imaged w-100">
-                                    <strong>Tanbu City Tour</strong>
+                                    <img src="{{$row->icon_menu}}" alt="img" class="imaged w-100">
+                                    <strong>{{$row->title_menu}}</strong>
                                 </div>
                             </a>
                 </div>
-                <div class="col-3">
-                    <a href="{{ url('/homeviewdetail/2') }}">
-                                <div class="user-card">
-                                    <img src="assets/img/icon_selangor_pandu.png" alt="img" class="imaged w-100">
-                                    <strong>GEGANA</strong>
-                                </div>
-                            </a>
-                </div>
-                <div class="col-3">
-                    <a href="{{ url('/homeviewdetail/3') }}">
-                                <div class="user-card">
-                                    <img src="assets/img/icon_wisata.png" alt="img" class="imaged w-100">
-                                    <strong>Prodigwis</strong>
-                                </div>
-                            </a>
-                </div>
-                
-                
-                <div class="col-3">
-                    <a href="{{ url('/homeviewdetail/4') }}">
-                                <div class="user-card">
-                                    <img src="assets/img/icon_selangor_trsnsport.png" alt="img" class="imaged w-100">
-                                    <strong>SIAP-PADU</strong>
-                                </div>
-                            </a>
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-3">
-                    <a href="{{ url('/homeviewdetail/5') }}">
-                                <div class="user-card">
-                                    <img src="assets/img/icon_keluhan.png" alt="img" class="imaged w-100">
-                                    <strong>Sipadu</strong>
-                                </div>
-                            </a>
-                </div>
-                <div class="col-3">
-                    <a href="{{ url('/homeviewdetail/6') }}">
-                                <div class="user-card">
-                                    <img src="assets/img/icon_pembiayaan.png" alt="img" class="imaged w-100">
-                                    <strong>SI PENSIL</strong>
-                                </div>
-                            </a>
-                </div>
-                <div class="col-3">
-                    <a href="{{ url('/homeviewdetail/7') }}">
-                                <div class="user-card">
-                                    <img src="assets/img/icon_perklindokter.png" alt="img" class="imaged w-100">
-                                    <strong>SIMETRIS</strong>
-                                </div>
-                            </a>
-                </div>
-                <div class="col-3">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">
-                                <div class="user-card">
-                                    <img src="assets/img/icon_mores.png" alt="img" class="imaged w-100">
-                                    <strong>Lainnya</strong>
-                                </div>
-                            </a>
-                </div>
+                @endforeach
                 
             </div>
             

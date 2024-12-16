@@ -82,10 +82,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
+                <a href="{{ route('admin.menufront')}}" class="nav-link {{ (request()->is('admin/menufront*')) ? 'active' : '' }}">
+                  <i class="nav-icon fas fa-id-badge"></i>
+                  <p>
+                   Menu Front
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="{{ route('admin.newsview')}}" class="nav-link {{ (request()->is('admin/news*')) ? 'active' : '' }}">
                   <i class="nav-icon fas fa-newspaper"></i>
                   <p>
                    News
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link {{ (request()->is('admin/news*')) ? 'active' : '' }}">
+                  <i class="nav-icon fas fa-mobile"></i>
+                  <p>
+                   PPOB
                   </p>
                 </a>
               </li>
