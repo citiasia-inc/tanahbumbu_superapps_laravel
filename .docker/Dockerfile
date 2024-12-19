@@ -30,8 +30,5 @@ RUN /usr/local/bin/composer update -d /var/www/ --lock
 RUN /usr/local/bin/composer install -d /var/www/ --prefer-dist
 RUN npm install
 
-# laravel script
-RUN php artisan storage:link
-
 CMD ["start-apache"]
 
