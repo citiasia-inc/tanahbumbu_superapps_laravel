@@ -1,0 +1,14 @@
+services:
+  web:
+    # build: .
+    image: akatgelar/citiasia-tanahbumbu-superapps:latest
+    container_name: 'tanahbumbu-superapps'
+    env_file:
+      - .env
+    ports:
+      - "2011:80"
+    # volumes:
+    #   - /home/ekosistemdesa/app/tanahbumbu-superapps/uploads:/var/www/public/uploads
+    #   - /home/ekosistemdesa/app/tanahbumbu-superapps/storage/framework:/var/www/storage/framework
+    #   - /home/ekosistemdesa/app/tanahbumbu-superapps/storage/logs:/var/www/storage/logs
+    restart: always
