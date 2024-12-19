@@ -1,0 +1,52 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+
+      - name: Login to Dockerhub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t akatgelar/citiasia-tanahbumbu-superapps:latest -f .docker/Dockerfile .
+          docker push akatgelar/citiasia-tanahbumbu-superapps:latest
+
+      - name: Copy docker-compose file to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USER }}
+          password: ${{ secrets.VPS_PASSWORD }}
+          source: .docker/docker-compose.yml
+          target: /home/ekosistemdesa/app/tanahbumbu-superapps/
+          strip_components: 1
+
+      - name: Deploy docker-compose on VPS
+        uses: appleboy/ssh-action@master
+        env:
+          ENV: ${{ secrets.ENV }}
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USER }}
+          password: ${{ secrets.VPS_PASSWORD }}
+          envs: ENV
+          script: |
+            cd /home/ekosistemdesa/app/tanahbumbu-superapps/
+            sudo rm .env
+            printf "$ENV" >> .env
+            sudo docker compose stop
+            sudo docker compose rm -f
+            sudo docker compose pull
+            sudo docker compose up -d
