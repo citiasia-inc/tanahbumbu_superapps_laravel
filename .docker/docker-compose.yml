@@ -7,6 +7,6 @@ services:
       - .env
     ports:
       - "2011:80"
-    volumes:
-      - /home/ekosistemdesa/app/tanahbumbu-superapps/storage:/var/www/public/storage
+    #volumes:
+    #  - /home/ekosistemdesa/app/tanahbumbu-superapps/storage:/var/www/public/storage
     restart: always
