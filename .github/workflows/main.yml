@@ -20,7 +20,6 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          php artisan storage:link
           docker build -t akatgelar/citiasia-tanahbumbu-superapps:latest -f .docker/Dockerfile .
           docker push akatgelar/citiasia-tanahbumbu-superapps:latest
 
