@@ -50,3 +50,5 @@ jobs:
             sudo docker compose rm -f
             sudo docker compose pull
             sudo docker compose up -d
+            sudo docker exec tanahbumbu-superapps php /var/www/artisan storage:link
+            sudo docker exec tanahbumbu-superapps php /var/www/artisan migrate
